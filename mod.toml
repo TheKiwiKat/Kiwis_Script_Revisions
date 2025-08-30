@@ -5,36 +5,50 @@
 
 # Unique ID of this mod. Pick something long enough that it'll never be the same as any other mod.
 # The name displayed in the mod management menu is separate from this so this doesn't need to be human readable.
-id = "mm_recomp_mod_template"
+id = "MM_Kiwis_Script_Revisions"
 
 # Version of this mod.
 version = "1.0.0"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
-display_name = "Always Spin Attack"
+display_name = "Kiwi's Script Revisions"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
-This is an example mod for Majora's Mask: Recompiled that can be used as a template for creating mods. \
-When this mod is enabled, you will always perform a quickspin when swinging your sword.
+This mod overhauls the script for Majora's Mask and makes revisions to dialogue, messages, menus and other text found in the game. This incorporates almost all the changes made to the script in the European and Gamecube versions of the game, as well as:
 
-For more details, see https://github.com/Zelda64Recomp/MMRecompModTemplate."""
+-Fixing typos, mistranslations, and grammatical errors
+
+-Fixing broken/incorrect textbox formatting, icons, and other effects
+
+-Fixing broken, incorrect, and missing dialogue sound effects
+
+-Fixing incorrect text colors
+
+-Fixing inconsistent keyword spellings, capitalization, color choices, and other stylistic choices
+
+
+Requires Lt_Schmiddy's EZ Text Replacer API to function:
+https://github.com/LT-Schmiddy/mm-ez-text-replacement-utils
+
+
+Special thanks to Lt_Schmiddy for the aforementioned API, and Skawo and SageOfMirrors for the Zelda 64 Text Editor. Both of these made creating this mod as simple as possible."""
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
-short_description = "Always perform a quickspin when swinging your sword."
+short_description = "Tsk, tsk, Brac..."
 
 # Authors of this mod.
-authors = [ "Your name here" ]
+authors = [ "TheKiwiKat" ]
 
 # ID of the target recomp game.
 game_id = "mm"
 
 # Minimum version of the target recomp (e.g. Zelda 64: Recompiled) that this mod can run on.
-minimum_recomp_version = "1.2.2"
+minimum_recomp_version = "1.2.0"
 
 # Dependency mods. Each entry is the mod's ID and then an optional minimum version of the dependency mod.
-dependencies = [
+dependencies = ["MM_EZ_Text_Replacer_API:2.3.0"
 # Example dependency:
 #    "modname:1.0.0"
 ]
@@ -59,38 +73,279 @@ native_libraries = [
 elf_path = "build/mod.elf"
 
 # Output mod filename.
-mod_filename = "mm_recomp_mod_template"
+mod_filename = "mm_kiwis_script_revisions"
 
 # Reference symbol files.
 func_reference_syms_file = "Zelda64RecompSyms/mm.us.rev1.syms.toml"
 data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zelda64RecompSyms/mm.us.rev1.datasyms_static.toml" ]
 
 # Additional files to include in the mod.
-additional_files = [ ]
+additional_files = ["thumb.dds"]
 
 [[manifest.config_options]]
-id = "enum_option"
-name = "Enum Option"
-description = "Test enum config option"
+id = "carpenter_fix"
+name = "Carpenter Mistranslation Fix"
+description = """
+Fixes mistranslated lines spoken by Bremor, the lumber-carrying carpenter.
+
+
+US: Keeps the original text.
+
+GC: Ports the retranslated text used in the Gamecube version of MM. (DEFAULT)
+
+EU/3DS: Ports the retranslated text used in the European versions of MM and in MM3D."""
 type = "Enum"
-options = [ "First", "Second" ]
-default = "First"
+options = [ "US", "GC", "EU/3DS" ]
+default = "GC"
 
 [[manifest.config_options]]
-id = "number_option"
-name = "Number Option"
-description = "Test number config option."
-type = "Number"
-min = 0
-max = 10
-step = 0.1
-precision = 1
-percent = false
-default = 1
+id = "giant_turtle_fix"
+name = "Giant Turtle Mistranslation Fix"
+description = """
+Ports fix from MM3D for a mistranslated line spoken by the Giant Turtle, and reorders his dialogue correctly.
+
+
+N64: Keeps the original text.
+
+3DS: Enables mistranslation fix."""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
 
 [[manifest.config_options]]
-id = "string_option"
-name = "String Option"
-description = "Test string config option."
-type = "String"
-default = "Lorem Ipsum"
+id = "lulu_diary_fix"
+name = "Lulu Diary Mistranslation Fix"
+description = """
+Fixes a mistranslation in Lulu's Diary.
+
+
+N64: Keeps the original text.
+
+FAITHFUL: Fixes the mistranslation while staying as close to the original wording as possible. (DEFAULT)
+
+3DS: Ports the retranslated text from MM3D."""
+type = "Enum"
+options = [ "N64", "Faithful", "3DS" ]
+default = "Faithful"
+
+[[manifest.config_options]]
+id = "tatl_kafei_fix"
+name = "Tatl in Sakon's Hideout Mistranslation Fix"
+description = """
+Fixes a mistranslation in Tatl's dialogue while talking to Kafei in Sakon's Hideout.
+
+
+N64: Keeps the original text.
+
+FAITHFUL: Fixes the mistranslation while staying as close to the original wording as possible. (DEFAULT)
+
+3DS: Ports the retranslated text from MM3D."""
+type = "Enum"
+options = [ "N64", "Faithful", "3DS" ]
+default = "Faithful"
+
+[[manifest.config_options]]
+id = "gibdo_gossip_fix"
+name = "Gibdo Mask Gossip Stone Mistranslation Fix"
+description = """
+Fixes a mistranslated line for the Gossip Stone on the Moon that gives the hint for the Gibdo Mask.
+
+
+N64: Keeps the original text.
+
+FAITHFUL: Fixes the mistranslation while staying as close to the original wording as possible. (DEFAULT)
+
+3DS: Ports the retranslated text from MM3D."""
+type = "Enum"
+options = [ "N64", "Faithful", "3DS" ]
+default = "Faithful"
+
+[[manifest.config_options]]
+id = "swordsman_fix"
+name = "Swordsman Expert Course Mistranslation Fix"
+description = """
+Fixes mistranslated lines spoken by the Swordsman when agreeing to take the Expert Course.
+
+
+N64: Keeps the original text.
+
+FAITHFUL: Fixes the mistranslation while staying as close to the original wording as possible. (DEFAULT)
+
+3DS: Ports the retranslated text from MM3D."""
+type = "Enum"
+options = [ "N64", "Faithful", "3DS" ]
+default = "Faithful"
+
+[[manifest.config_options]]
+id = "old_lady_fix"
+name = "Old Lady From Bomb Shop Mistranslation Fix"
+description = """
+Ports fix from MM3D for mistranslated lines spoken by Old Lady from Bomb Shop while having her bag stolen.
+
+
+N64: Keeps the original text.
+
+3DS: Enables mistranslation fix."""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
+
+[[manifest.config_options]]
+id = "cremia_welcome_fix"
+name = "Cremia Welcome Dialogue Mistranslation Fix"
+description = """
+Ports fix from MM3D for mistranslated lines spoken by Cremia when she welcomes you to the ranch.
+
+
+N64: Keeps the original text.
+
+3DS: Enables mistranslation fix."""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
+
+[[manifest.config_options]]
+id = "gorman_cards_fix"
+name = "Stock Pot Inn Gorman Mistranslation Fix"
+description = """
+Ports fix from MM3D for a mistranslated line spoken by Gorman while playing cards with the Juggler Twins.
+
+
+N64: Keeps the original text.
+
+3DS: Enables mistranslation fix."""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
+
+[[manifest.config_options]]
+id = "land_deed_name_change"
+name = "Land/Town Title Deed Name"
+description = """
+Lets you choose between keeping the name used in the N64 versions of the game and the new one used in MM3D.
+
+
+N64: Land Title Deed (DEFAULT)
+
+3DS: Town Title Deed
+
+
+NOTE: "Town Title Deed" option currently does not change item preview name at bottom of the Item Select Subscreen, so it will still display as "Land Title Deed"
+"""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "N64"
+
+[[manifest.config_options]]
+id = "gorman_mask_name_change"
+name = "Circus/Troupe Leader's Mask Name"
+description = """
+Lets you choose between keeping the name used in the N64 versions of the game and the new one used in MM3D. 
+
+
+N64: Circus Leader's Mask (DEFAULT)
+
+3DS: Troupe Leader's Mask (also changes all mentions of "circus" to "troupe" for parity with MM3D)
+
+
+NOTE: "Troupe Leader's Mask" option currently does not change item preview name at bottom of the Masks Subscreen, so it will still display as "Circus Leader's Mask"
+"""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "N64"
+
+[[manifest.config_options]]
+id = "boss_key_name_change"
+name = "Boss/Big Key Name Change"
+description = """
+Lets you choose between changing the name to Big Key to match the name in the Map Subscreen, and the name used in the item get message. 
+
+BIG KEY option is DEFAULT.
+
+
+NOTE: "Boss Key" option currently does not change item preview name at the bottom of the Map Subscreen, so it will still display as "Big Key"
+"""
+type = "Enum"
+options = [ "Vanilla", "Big Key", "Boss Key", ]
+default = "Big Key"
+
+[[manifest.config_options]]
+id = "spirit_house_change"
+name = "Ghost Hut to Spirit House"
+description = """
+Lets you choose between keeping the N64 area title card and the one used in MM3D that matches the sign outside. 
+
+
+N64: Ghost Hut
+
+3DS: Spirit House (DEFAULT)"""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
+
+[[manifest.config_options]]
+id = "beaver_sign_change"
+name = "Zora Cape Waterfall Sign Mistranslation Fix"
+description = """
+Lets you choose between keeping the N64 sign text and the retranslated text used in MM3D that makes more sense for the sign's location. 
+
+
+N64: Fall Headwaters
+
+3DS: Above the Waterfall (DEFAULT)"""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
+
+[[manifest.config_options]]
+id = "ikana_sign_change"
+name = "Ikana Hill Sign Mistranslation Fix"
+description = """
+Lets you choose between keeping the N64 sign text and the retranslated text used in MM3D that matches the name used in the rest of the game. 
+
+
+N64: Ikana Butte
+
+3DS: Ikana Hill (DEFAULT)"""
+type = "Enum"
+options = [ "N64", "3DS" ]
+default = "3DS"
+
+[[manifest.config_options]]
+id = "ranch_house_change"
+name = "Mama's House Mistranslation Fix"
+description = """
+Lets you choose between keeping the area title card used in N64 US, GC and MM3D, and the retranslated text used in EU. 
+
+
+N64/GC/3DS: Mama's House (DEFAULT)
+
+EU: Ranch House"""
+type = "Enum"
+options = [ "US/GC/3DS", "EU" ]
+default = "US/GC/3DS"
+
+[[manifest.config_options]]
+id = "koume_format_fix"
+name = "Koume High Score Formatting Fix"
+description = """
+Lets you choose between the formatting fix for Koume's high score dialogue used in EU and the one used in GC.
+
+
+EU: Box break after fourth line
+
+GC: Box break after second line (DEFAULT)"""
+type = "Enum"
+options = [ "EU", "GC" ]
+default = "GC"
+
+[[manifest.config_options]]
+id = "extra_sfx"
+name = "Extra Dialogue Sound Effects"
+description = """
+Adds extra sound effects for various dialogues.
+
+Currently only makes Gorman yell at you while doing the sound test in the Milk Bar."""
+type = "Enum"
+options = [ "On", "Off" ]
+default = "On"
