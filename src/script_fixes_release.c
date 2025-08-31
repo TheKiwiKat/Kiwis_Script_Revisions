@@ -2161,20 +2161,6 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [CONSISTENCY CHANGES/FORMATTING FIXES/COLOR FIXES] OWL STATUE: Changes color of colon to match rest of game, changes "Day One" to "the Dawn of the First Day" and makes it red, changes formatting to fit new text, and changes "The" before "Song of Time" to lowercase
-    EZTR_Basic_ReplaceText(
-        0x0C01,
-        EZTR_STANDARD_TEXT_BOX_I,
-        1,
-        EZTR_ICON_NO_ICON,
-        EZTR_NO_VALUE,
-        EZTR_NO_VALUE,
-        EZTR_NO_VALUE,
-        true,
-        "" EZTR_CC_QUICKTEXT_ENABLE "You can " EZTR_CC_COLOR_RED "save" EZTR_CC_COLOR_DEFAULT " your " EZTR_CC_COLOR_RED "progress" EZTR_CC_COLOR_DEFAULT " and" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_RED "quit" EZTR_CC_COLOR_DEFAULT " here. When you" EZTR_CC_NEWLINE "reselect your file, my face will" EZTR_CC_NEWLINE "appear by your file name." EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_BOX_BREAK "" EZTR_CC_QUICKTEXT_ENABLE "This indicates that the next time" EZTR_CC_NEWLINE "you reopen your file, you'll resume" EZTR_CC_NEWLINE "playing at this " EZTR_CC_COLOR_RED "very place" EZTR_CC_COLOR_DEFAULT " and" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_RED "time" EZTR_CC_COLOR_DEFAULT " with your " EZTR_CC_COLOR_RED "current status" EZTR_CC_COLOR_DEFAULT "." EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_BOX_BREAK "" EZTR_CC_COLOR_RED "" EZTR_CC_QUICKTEXT_ENABLE "Warning" EZTR_CC_COLOR_DEFAULT ": If you reopen this Owl" EZTR_CC_NEWLINE "File, then reset without saving at" EZTR_CC_NEWLINE "an owl statue, you'll lose the" EZTR_CC_NEWLINE "progress you've saved here..." EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_BOX_BREAK "" EZTR_CC_QUICKTEXT_ENABLE "The next time you open the file, you'll" EZTR_CC_NEWLINE "restart at the " EZTR_CC_COLOR_RED "Dawn of the First Day" EZTR_CC_COLOR_DEFAULT "" EZTR_CC_NEWLINE "with the status you had when you" EZTR_CC_NEWLINE "last saved using the Song of Time." EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_BOX_BREAK "" EZTR_CC_COLOR_RED "Save" EZTR_CC_COLOR_DEFAULT " your " EZTR_CC_COLOR_RED "progress" EZTR_CC_COLOR_DEFAULT " up to this" EZTR_CC_NEWLINE "point and " EZTR_CC_COLOR_RED "quit" EZTR_CC_COLOR_DEFAULT " playing?" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_GREEN "" EZTR_CC_TWO_CHOICE "No" EZTR_CC_NEWLINE "Yes" EZTR_CC_END "",
-        NULL
-    );
-
     // [COLOR FIXES/GRAMMAR FIXES] ZUBORA: Fixes color of period after "sunrise" to match rest of game, and adds comma after "edge"
     EZTR_Basic_ReplaceText(
         0x0C3B,
@@ -8068,3 +8054,4 @@ EZTR_ON_INIT void script_revisions() {
         );
     };
 }
+
