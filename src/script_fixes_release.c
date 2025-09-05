@@ -170,6 +170,20 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
+    // [GRAMMAR FIXES] SYSTEM: Capitalizes "princess". Ported from 3DS
+    EZTR_Basic_ReplaceText(
+        0x005F,
+        EZTR_TRANSLUSCENT_BLUE_TEXT_BOX,
+        0,
+        EZTR_ICON_DEKU_PRINCESS,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_QUICKTEXT_ENABLE "You put the " EZTR_CC_COLOR_RED "Deku Princess" EZTR_CC_COLOR_DEFAULT " in a" EZTR_CC_NEWLINE "bottle!" EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "It's a tight fit, but she says she'll" EZTR_CC_NEWLINE "be fine if you hurry. Use " EZTR_CC_COLOR_YELLOW "" EZTR_CC_BTN_C "" EZTR_CC_COLOR_DEFAULT " to" EZTR_CC_NEWLINE "let her out." EZTR_CC_END "",
+        NULL
+    );
+
     // [GRAMMAR FIXES] SYSTEM: Adds comma before "quick"
     EZTR_Basic_ReplaceText(
         0x0069,
@@ -438,7 +452,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for Mama's/Ranch house name
     if (!CONFIG_RANCH_HOUSE) {
-        // [CONSISTENCY CHANGES] SYSTEM: Changes "Mama's House" to "Ranch House" to match EU
+        // [CONSISTENCY CHANGES] SYSTEM: Changes "Mama's House" to "Ranch House" to match EU.
         EZTR_Basic_ReplaceText(
             0x0132,
             EZTR_INVISIBLE_TEXT_BOX_V,
@@ -455,7 +469,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for Ghost Hut/Spirit House name 
     if (!CONFIG_SPIRIT_HOUSE) {
-        // [CONSISTENCY CHANGES] SYSTEM: Changes "Ghost Hut" to "Spirit House" to match sign outside
+        // [CONSISTENCY CHANGES] SYSTEM: Changes "Ghost Hut" to "Spirit House" to match sign outside.
         EZTR_Basic_ReplaceText(
             0x0146,
             EZTR_INVISIBLE_TEXT_BOX_V,
@@ -654,7 +668,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for Zora Cape Waterfall sign
     if (!CONFIG_BEAVER_SIGN) {
-        // [MISTRANSLATION FIXES] SIGNS: Changes "Fall Headwaters" to "Above the Waterfall" to correctly reflect location. Ported from 3DS
+        // [MISTRANSLATION FIXES] SIGNS: Changes "Fall Headwaters" to "Above the Waterfall" to correctly reflect location. Ported from 3DS.
         EZTR_Basic_ReplaceText(
             0x0328,
             EZTR_WOODEN_SIGN_BACKGROUND,
@@ -671,7 +685,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for Ikana Butte sign
     if (!CONFIG_IKANA_SIGN) {
-        // [MISTRANSLATION FIXES] SIGNS: Changes "Butte" to "Hill" to match name used in rest of game. Ported from 3DS
+        // [MISTRANSLATION FIXES] SIGNS: Changes "Butte" to "Hill" to match name used in rest of game. Ported from 3DS.
         EZTR_Basic_ReplaceText(
             0x032E,
             EZTR_WOODEN_SIGN_BACKGROUND,
@@ -1249,7 +1263,7 @@ EZTR_ON_INIT void script_revisions() {
     // [CONFIG] Configuration for Bremor translation
     if (CONFIG_CARPENTER != CARPENTER_VANILLA) {
         if (CONFIG_CARPENTER == CARPENTER_GC) { 
-            // [TRANSLATION FIXES] BREMOR: Fixes Day 1 dialogue "Brac" mistranslation to match GC
+            // [TRANSLATION FIXES] BREMOR: Fixes Day 1 dialogue "Brac" mistranslation to match GC.
             EZTR_Basic_ReplaceText(
                 0x061C,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -1262,7 +1276,7 @@ EZTR_ON_INIT void script_revisions() {
                 "" EZTR_CC_SFX "|69|6ATsk! Another all-nighter t'night?" EZTR_CC_NEWLINE "I wonder if we'll finish it..." EZTR_CC_EVENT2 "" EZTR_CC_END "",
                 NULL
             );
-            // [TRANSLATION FIXES] BREMOR: Fixes Day 2 dialogue "Brac" mistranslation to match GC
+            // [TRANSLATION FIXES] BREMOR: Fixes Day 2 dialogue "Brac" mistranslation to match GC.
             EZTR_Basic_ReplaceText(
                 0x061F,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -1276,7 +1290,7 @@ EZTR_ON_INIT void script_revisions() {
                     NULL
             );
         } else {
-            // [TRANSLATION FIXES] BREMOR: Fixes Day 1 dialogue "Brac" mistranslation to match EU and 3DS
+            // [TRANSLATION FIXES] BREMOR: Fixes Day 1 dialogue "Brac" mistranslation to match EU and 3DS.
             EZTR_Basic_ReplaceText(
                 0x061C,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -1289,7 +1303,7 @@ EZTR_ON_INIT void script_revisions() {
                 "" EZTR_CC_SFX "|69|6AHeigh-ho, heigh-ho!" EZTR_CC_NEWLINE "It looks like another all-nighter." EZTR_CC_NEWLINE "I wonder if that'll get finished." EZTR_CC_EVENT2 "" EZTR_CC_END "",
                 NULL
             );
-            // [TRANSLATION FIXES] BREMOR: Fixes Day 2 dialogue "Brac" mistranslation to match EU and 3DS
+            // [TRANSLATION FIXES] BREMOR: Fixes Day 2 dialogue "Brac" mistranslation to match EU and 3DS.
             EZTR_Basic_ReplaceText(
                 0x061F,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -1302,7 +1316,7 @@ EZTR_ON_INIT void script_revisions() {
                 "" EZTR_CC_SFX "|69|6AHeigh-ho, heigh-ho!" EZTR_CC_NEWLINE "It's gonna be another all-nighter" EZTR_CC_NEWLINE "like I figured. I wonder if it'll get" EZTR_CC_NEWLINE "finished on time." EZTR_CC_EVENT2 "" EZTR_CC_END "",
                 NULL
             );
-            // [TRANSLATION FIXES] BREMOR: Changes Day 3 dialogue to match EU and 3DS
+            // [TRANSLATION FIXES] BREMOR: Changes Day 3 dialogue to match EU and 3DS.
             EZTR_Basic_ReplaceText(
                 0x0622,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -1583,20 +1597,6 @@ EZTR_ON_INIT void script_revisions() {
         "The " EZTR_CC_COLOR_RED "secret route" EZTR_CC_COLOR_DEFAULT " to the" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_RED "observatory" EZTR_CC_COLOR_DEFAULT "? How do you know" EZTR_CC_NEWLINE "about that?" EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "Only " EZTR_CC_COLOR_RED "Jim" EZTR_CC_COLOR_DEFAULT " and us are supposed to" EZTR_CC_NEWLINE "know about that " EZTR_CC_COLOR_RED "secret route" EZTR_CC_COLOR_DEFAULT "..." EZTR_CC_EVENT2 "" EZTR_CC_END "",
         NULL
     );
-    
-    // [FORMATTING FIXES] BOMBER: Adds NEWLINE at beginning to fix broken formatting
-    EZTR_Basic_ReplaceText(
-        0x075A,
-        EZTR_STANDARD_TEXT_BOX_I,
-        0,
-        EZTR_ICON_NO_ICON,
-        EZTR_NO_VALUE,
-        EZTR_NO_VALUE,
-        EZTR_NO_VALUE,
-        true,
-        "" EZTR_CC_NEWLINE "Do you remember the code?" EZTR_CC_NEWLINE "It's " EZTR_CC_COLOR_RED "" EZTR_CC_BOMBER_CODE "" EZTR_CC_COLOR_DEFAULT "!" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Go to the " EZTR_CC_COLOR_RED "secret hideout" EZTR_CC_COLOR_DEFAULT " before" EZTR_CC_NEWLINE "you forget it! It's in " EZTR_CC_COLOR_RED "East Clock" EZTR_CC_NEWLINE "Town" EZTR_CC_COLOR_DEFAULT "!" EZTR_CC_EVENT2 "" EZTR_CC_END "",
-        NULL
-    );
 
     // [FORMATTING FIXES] DEKU PALACE GUARD: Fixes formatting by changing to BOX_BREAK2
     EZTR_Basic_ReplaceText(
@@ -1726,7 +1726,7 @@ EZTR_ON_INIT void script_revisions() {
             NULL
         );
     } else {
-        // [FORMATTING FIXES/COLOR FIXES] KOUME: Ports EU formatting fixes, and changes "hits" to red to match similar messages
+        // [FORMATTING FIXES/COLOR FIXES] KOUME: Ports EU formatting fixes, and changes "hits" to red to match similar messages.
         EZTR_Basic_ReplaceText(
             0x0876,
             EZTR_STANDARD_TEXT_BOX_I,
@@ -1895,6 +1895,20 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
+    // [GRAMMAR FIXES] DEKU PRINCESS: Capitalizes "princess". Ported from 3DS
+    EZTR_Basic_ReplaceText(
+        0x0961,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_NAME "?" EZTR_CC_NEWLINE "Pleased to meet you. I am the" EZTR_CC_NEWLINE "Deku Princess." EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "Were you, by chance, asked by" EZTR_CC_NEWLINE "that monkey to come save me?" EZTR_CC_END "",
+        NULL
+    );
+
     // [FORMATTING FIXES] DEKU PRINCESS: Formatting fixes by changing to BOX_BREAK2.
     EZTR_Basic_ReplaceText(
         0x0962,
@@ -1951,7 +1965,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [CONSISTENCY CHANGES] DEKU PRINCESS: Changes second "W" to lowercase to standardize stutters
+    // [CONSISTENCY CHANGES/SFX FIXES] DEKU PRINCESS: Changes second "W" to lowercase to standardize stutters, and fixes incorrect sound effect "3937" to "6937".
     EZTR_Basic_ReplaceText(
         0x0966,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -1961,11 +1975,11 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         EZTR_NO_VALUE,
         true,
-        "" EZTR_CC_SFX "|39|37W-well, we haven't any time to" EZTR_CC_NEWLINE "lose..." EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Quickly, Mr. " EZTR_CC_NAME ", could you" EZTR_CC_NEWLINE "please find something to " EZTR_CC_COLOR_RED "carry" EZTR_CC_COLOR_DEFAULT " me" EZTR_CC_NEWLINE "in so you can take me to the" EZTR_CC_NEWLINE "Deku Palace?" EZTR_CC_END "",
+        "" EZTR_CC_SFX "|69|37W-well, we haven't any time to" EZTR_CC_NEWLINE "lose..." EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Quickly, Mr. " EZTR_CC_NAME ", could you" EZTR_CC_NEWLINE "please find something to " EZTR_CC_COLOR_RED "carry" EZTR_CC_COLOR_DEFAULT " me" EZTR_CC_NEWLINE "in so you can take me to the" EZTR_CC_NEWLINE "Deku Palace?" EZTR_CC_END "",
         NULL
     );
 
-    // [CONSISTENCY CHANGES] DEKU PRINCESS: Standardizes stutters in "Hwh-Hwhy," "Huh-Hurry" and "Ho-Hopen" to lowercase
+    // [CONSISTENCY CHANGES/SFX FIXES] DEKU PRINCESS: Standardizes stutters in "Hwh-Hwhy," "Huh-Hurry" and "Ho-Hopen" to lowercase, and fixes incorrect sound effect "3937" to "6937".
     EZTR_Basic_ReplaceText(
         0x0969,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -1975,7 +1989,7 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         EZTR_NO_VALUE,
         true,
-        "" EZTR_CC_SFX "|39|37Hwh-hwhy are you hwaiting?" EZTR_CC_NEWLINE "Mr. " EZTR_CC_COLOR_RED "" EZTR_CC_NAME "" EZTR_CC_COLOR_DEFAULT "!" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Huh-hurry! Ho-hopen this " EZTR_CC_COLOR_RED "bottle" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "and release me right hwh-hwhere" EZTR_CC_NEWLINE "my father is standing." EZTR_CC_FADE "|00|1E" EZTR_CC_END "",
+        "" EZTR_CC_SFX "|69|37Hwh-hwhy are you hwaiting?" EZTR_CC_NEWLINE "Mr. " EZTR_CC_COLOR_RED "" EZTR_CC_NAME "" EZTR_CC_COLOR_DEFAULT "!" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Huh-hurry! Ho-hopen this " EZTR_CC_COLOR_RED "bottle" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "and release me right hwh-hwhere" EZTR_CC_NEWLINE "my father is standing." EZTR_CC_FADE "|00|1E" EZTR_CC_END "",
         NULL
     );
 
@@ -2217,6 +2231,20 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
+    // [SFX FIXES] DARMANI: Fixes sound effect not playing.
+    EZTR_Basic_ReplaceText(
+        0x0CE8,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_DELAY "|00|0ABut alas..." EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "" EZTR_CC_SFX "|3A|CFI am now dead." EZTR_CC_EVENT2 "" EZTR_CC_END "",
+        NULL
+    );
+
     // [SFX FIXES] DARMANI: Fixes incorrect sound effect from from "3AE8" to "3AD0" and fixes it not playing. Ported from EU.
     EZTR_Basic_ReplaceText(
         0x0CEA,
@@ -2315,7 +2343,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [GRAMMAR FIXES] DON GERO GORON: Adds comma after "coming", and changes "have" to "has"
+    // [SFX FIXES/GRAMMAR FIXES] DON GERO GORON: Fixes sound effect not playing, adds comma after "coming", and changes "have" to "has".
     EZTR_Basic_ReplaceText(
         0x0D89,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -2325,7 +2353,7 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         EZTR_NO_VALUE,
         true,
-        "Hello?" EZTR_CC_NEWLINE "" EZTR_CC_SFX "|3A|04You are Don Gero!!!" EZTR_CC_NEWLINE "It has been so long!" EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "Just as you instructed, I came" EZTR_CC_NEWLINE "here to start up the frog's choir" EZTR_CC_NEWLINE "as soon as spring arrived." EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "But spring doesn't seem to be" EZTR_CC_NEWLINE "coming, and none of the choir has" EZTR_CC_NEWLINE "gathered!" EZTR_CC_EVENT "" EZTR_CC_END "",
+        "Hello?" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "" EZTR_CC_SFX "|3A|04You are Don Gero!!!" EZTR_CC_NEWLINE "It has been so long!" EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "Just as you instructed, I came" EZTR_CC_NEWLINE "here to start up the frog's choir" EZTR_CC_NEWLINE "as soon as spring arrived." EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "But spring doesn't seem to be" EZTR_CC_NEWLINE "coming, and none of the choir has" EZTR_CC_NEWLINE "gathered!" EZTR_CC_EVENT "" EZTR_CC_END "",
         NULL
     );
 
@@ -2724,7 +2752,7 @@ EZTR_ON_INIT void script_revisions() {
     // [CONFIG] Configuration for Lulu diary mistranslation fix
     if (CONFIG_LULU_DIARY != DIARY_VANILLA) {
         if (CONFIG_LULU_DIARY == DIARY_FAITHFUL) {
-            // [MISTRANSLATION FIXES] LULU'S DIARY: Fixes mistranslation by changing "had" to "hadn't"
+            // [MISTRANSLATION FIXES] LULU'S DIARY: Fixes mistranslation by changing "And" to "But" and "had" to "hadn't".
             EZTR_Basic_ReplaceText(
                 0x101F,
                 EZTR_STANDARD_TEXT_BOX_II,
@@ -2738,7 +2766,7 @@ EZTR_ON_INIT void script_revisions() {
                 NULL
             );
         } else {
-            // [MISTRANSLATION FIXES] LULU'S DIARY: Ports 3DS translation fix
+            // [MISTRANSLATION FIXES] LULU'S DIARY: Ports 3DS translation fix.
             EZTR_Basic_ReplaceText(
                 0x101F,
                 EZTR_STANDARD_TEXT_BOX_II,
@@ -3050,7 +3078,7 @@ EZTR_ON_INIT void script_revisions() {
         "What will you do?" EZTR_CC_NEWLINE " " EZTR_CC_NEWLINE "" EZTR_CC_COLOR_GREEN "" EZTR_CC_TWO_CHOICE "I'll race" EZTR_CC_NEWLINE "I won't race" EZTR_CC_END "",
         NULL
     );
-    
+
     // [GRAMMAR FIXES] OLDER BEAVER BROTHER: Capitalizes "little brother"
     EZTR_Basic_ReplaceText(
         0x10FB,
@@ -3655,7 +3683,7 @@ EZTR_ON_INIT void script_revisions() {
                 NULL
             );
         } else { 
-            // [MISTRANSLATION FIXES] TATL: Ports mistranslation fix from 3DS
+            // [MISTRANSLATION FIXES] TATL: Ports mistranslation fix from 3DS.
             EZTR_Basic_ReplaceText(
                 0x146B,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -4315,6 +4343,20 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
+    // [SFX FIXES] TOWN BUSINESS SCRUB: Fixes incorrect sound effect "3885" to "3881".
+    EZTR_Basic_ReplaceText(
+        0x1635,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_SFX "|38|81" EZTR_CC_QUICKTEXT_ENABLE "Well, fine!" EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "I'll make a new storage unit" EZTR_CC_NEWLINE "somewhere else!!!" EZTR_CC_EVENT2 "" EZTR_CC_END "",
+        NULL
+    );
+
     // [FORMATTING FIXES] SCARECROW: Ports GC formatting changes.
     EZTR_Basic_ReplaceText(
         0x1659,
@@ -4550,6 +4592,104 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         true,
         "" EZTR_CC_COLOR_YELLOW "Biggest Bomb Bag" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "This can hold up to a maximum of" EZTR_CC_NEWLINE "" EZTR_CC_COLOR_RED "40 bombs" EZTR_CC_COLOR_DEFAULT "." EZTR_CC_END "",
+        NULL
+    );
+
+    // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1800,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45It won't budge!" EZTR_CC_END "",
+        NULL
+    );
+    
+        // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1801,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45Aaargh! These strong iron bars" EZTR_CC_NEWLINE "are blocking the way!" EZTR_CC_NEWLINE "Think of another way out..." EZTR_CC_END "",
+        NULL
+    );
+    
+    // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1802,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45You don't have the key!" EZTR_CC_END "",
+        NULL
+    );
+
+    // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1803,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45Your key doesn't fit this lock!" EZTR_CC_END "",
+        NULL
+    );
+    
+    // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1804,
+        EZTR_STANDARD_TEXT_BOX_I,
+        32,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45If you try to ride the horse in" EZTR_CC_NEWLINE "that form, you'll flatten the poor" EZTR_CC_NEWLINE "thing!" EZTR_CC_END "",
+        NULL
+    );
+
+    // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1805,
+        EZTR_STANDARD_TEXT_BOX_I,
+        32,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45In that form, you won't be able" EZTR_CC_NEWLINE "to get your whole body on the" EZTR_CC_NEWLINE "horse!" EZTR_CC_END "",
+        NULL
+    );
+
+    // [CONSISTENCY CHANGES] TATL: Changes text box type from blue to stanadard to match other Tatl non-enemy hints and messages
+    EZTR_Basic_ReplaceText(
+        0x1806,
+        EZTR_STANDARD_TEXT_BOX_I,
+        32,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_COLOR_LIGHTBLUE "" EZTR_CC_SFX "|68|45You can't even reach the horse in" EZTR_CC_NEWLINE "that form!" EZTR_CC_END "",
         NULL
     );
 
@@ -4816,20 +4956,6 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         true,
         "" EZTR_CC_COLOR_LIGHTBLUE "That's a " EZTR_CC_COLOR_DEFAULT "Gekko" EZTR_CC_COLOR_LIGHTBLUE "." EZTR_CC_NEWLINE "It gets itself all worked up, and" EZTR_CC_NEWLINE "then it just runs around." EZTR_CC_NEWLINE "I hate it." EZTR_CC_END "",
-        NULL
-    );
-
-    // [FORMATTING FIXES] TATL: Changes text box type to BLUE_TEXT_BOX to match other Tatl hints
-    EZTR_Basic_ReplaceText(
-        0x1964,
-        EZTR_BLUE_TEXT_BOX,
-        0,
-        EZTR_ICON_NO_ICON,
-        EZTR_NO_VALUE,
-        EZTR_NO_VALUE,
-        EZTR_NO_VALUE,
-        true,
-        "" EZTR_CC_COLOR_LIGHTBLUE "The power of this mask allows" EZTR_CC_NEWLINE "you to see what you can smell..." EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "If it's possible, put the " EZTR_CC_COLOR_RED "scent" EZTR_CC_COLOR_LIGHTBLUE " in" EZTR_CC_NEWLINE "something and take it to the" EZTR_CC_NEWLINE "Magic Hags' Potion Shop." EZTR_CC_END "",
         NULL
     );
 
@@ -5113,6 +5239,20 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
+    // [SFX FIXES] HAPPY MASK SALESMAN: Fixes sound effect not playing.
+    EZTR_Basic_ReplaceText(
+        0x1FCC,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "Surely you should be able to do" EZTR_CC_NEWLINE "something." EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Believe in your strengths..." EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "" EZTR_CC_SFX "|69|7FBelieve..." EZTR_CC_EVENT2 "" EZTR_CC_END "",
+        NULL
+    );
+
     // [SFX FIXES] HAPPY MASK SALESMAN: Fixes missing sound effect "6983". Ported from EU.
     EZTR_Basic_ReplaceText(
         0x1FF8,
@@ -5138,6 +5278,20 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         true,
         "" EZTR_CC_COLOR_RED "" EZTR_CC_SFX "|68|51Swamp" EZTR_CC_COLOR_PINK ". " EZTR_CC_COLOR_RED "" EZTR_CC_DELAY "|00|0AMountain" EZTR_CC_COLOR_PINK "." EZTR_CC_NEWLINE "" EZTR_CC_COLOR_RED "" EZTR_CC_DELAY "|00|0AOcean" EZTR_CC_COLOR_PINK ". " EZTR_CC_COLOR_RED "" EZTR_CC_DELAY "|00|0ACanyon" EZTR_CC_COLOR_PINK "." EZTR_CC_NEWLINE "" EZTR_CC_DELAY "|00|0AHurry..." EZTR_CC_COLOR_RED "The four" EZTR_CC_COLOR_PINK " who are there..." EZTR_CC_NEWLINE "Bring them " EZTR_CC_COLOR_RED "here" EZTR_CC_COLOR_PINK "..." EZTR_CC_END "",
+        NULL
+    );
+
+    // [SFX FIXES] SKULL KID: Fixes sound effect not playing.
+    EZTR_Basic_ReplaceText(
+        0x200E,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "...Well, whatever." EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Even if they were to come now," EZTR_CC_NEWLINE "they wouldn't be able to handle" EZTR_CC_NEWLINE "me..." EZTR_CC_NEWLINE "" EZTR_CC_COLOR_DEFAULT "" EZTR_CC_SFX "|3A|76Hee, hee." EZTR_CC_END "",
         NULL
     );
 
@@ -5284,7 +5438,7 @@ EZTR_ON_INIT void script_revisions() {
      // [CONFIG] Configuration for Gibdo Mask Hint Gossip Stone mistranslation fix
     if (CONFIG_GIBDO_GOSSIP != GIBDO_VANILLA) {
         if (CONFIG_GIBDO_GOSSIP == GIBDO_FAITHFUL) {       
-            // [MISTRANSLATION FIXES/FORMATTING FIXES] GOSSIP STONES: Changes "could fall" to "fell", and reformats message to fill new empty space
+            // [MISTRANSLATION FIXES/FORMATTING FIXES] GOSSIP STONES: Changes "could fall" to "fell", and reformats message to fill new empty space.
             EZTR_Basic_ReplaceText(
                 0x210E,
                 EZTR_TRANSLUSCENT_BLUE_TEXT_BOX,
@@ -5298,7 +5452,7 @@ EZTR_ON_INIT void script_revisions() {
                 NULL
             );
         } else {
-            // [MISTRANSLATION FIXES] GOSSIP STONES: Ports mistranslation fix from 3DS, but uses better version of formatting
+            // [MISTRANSLATION FIXES] GOSSIP STONES: Ports mistranslation fix from 3DS, but uses better version of formatting.
             EZTR_Basic_ReplaceText(
                 0x210E,
                 EZTR_TRANSLUSCENT_BLUE_TEXT_BOX,
@@ -5597,7 +5751,7 @@ EZTR_ON_INIT void script_revisions() {
     // [CONFIG] Configuration for Swordsman mistranslation fix
     if (CONFIG_SWORDSMAN != SWORDSMAN_VANILLA) {
         if (CONFIG_SWORDSMAN == SWORDSMAN_FAITHFUL) {
-            // [MISTRANSLATION FIXES] SWORDSMAN: Removes "the" after "using"
+            // [MISTRANSLATION FIXES] SWORDSMAN: Removes "the" after "using".
             EZTR_Basic_ReplaceText(
                 0x273A,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -5610,7 +5764,7 @@ EZTR_ON_INIT void script_revisions() {
                 "" EZTR_CC_SFX "|69|5AThe " EZTR_CC_COLOR_RED "Expert Course" EZTR_CC_COLOR_DEFAULT " is a practice" EZTR_CC_NEWLINE "session!" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Cut down the " EZTR_CC_COLOR_RED "10" EZTR_CC_COLOR_DEFAULT " logs using" EZTR_CC_NEWLINE "highly difficult techniques!" EZTR_CC_EVENT "" EZTR_CC_END "",
                 NULL
             );
-            // [MISTRANSLATION FIXES] SWORDSMAN: Changes "be" to "have been"
+            // [MISTRANSLATION FIXES] SWORDSMAN: Changes "be" to "have been".
             EZTR_Basic_ReplaceText(
                 0x273B,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -5624,7 +5778,7 @@ EZTR_ON_INIT void script_revisions() {
                 NULL
             );
         } else {
-            // [MISTRANSLATION FIXES] SWORDSMAN: Ports mistranslation fix from 3DS
+            // [MISTRANSLATION FIXES] SWORDSMAN: Ports mistranslation fix from 3DS.
             EZTR_Basic_ReplaceText(
                 0x273A,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -5637,7 +5791,7 @@ EZTR_ON_INIT void script_revisions() {
                 "" EZTR_CC_SFX "|69|5AThe " EZTR_CC_COLOR_RED "Expert Course" EZTR_CC_COLOR_DEFAULT " is a practice" EZTR_CC_NEWLINE "session!" EZTR_CC_NEWLINE "" EZTR_CC_CARRIAGE_RETURN "" EZTR_CC_BOX_BREAK2 "Cut down the " EZTR_CC_COLOR_RED "10" EZTR_CC_COLOR_DEFAULT " logs using my" EZTR_CC_NEWLINE "most difficult technique!" EZTR_CC_EVENT "" EZTR_CC_END "",
                 NULL
             );
-            // [MISTRANSLATION FIXES] SWORDSMAN: Ports mistranslation fix from 3DS
+            // [MISTRANSLATION FIXES] SWORDSMAN: Ports mistranslation fix from 3DS.
             EZTR_Basic_ReplaceText(
                 0x273B,
                 EZTR_STANDARD_TEXT_BOX_I,
@@ -5905,6 +6059,20 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
+    // [SFX FIXES] DEKU PLAYGROUND: Fixes incorrect sound effect "388B" to "3880".
+    EZTR_Basic_ReplaceText(
+        0x27F5,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_SFX "|38|80Such a youthful face..." EZTR_CC_NEWLINE "...But we were really dealing with" EZTR_CC_NEWLINE "a fierce competitor!" EZTR_CC_EVENT2 "" EZTR_CC_END "",
+        NULL
+    );
+
     // [TYPO FIXES/CONSISTENCY CHANGES] DEKU PLAYGROUND: Fixes missing puncuation after results and changes color of results to red to match other records
     EZTR_Basic_ReplaceText(
         0x27F9,
@@ -6000,6 +6168,20 @@ EZTR_ON_INIT void script_revisions() {
         EZTR_NO_VALUE,
         true,
         "" EZTR_CC_SFX "|69|5FOne game is " EZTR_CC_COLOR_PINK "10 Rupees" EZTR_CC_COLOR_DEFAULT "." EZTR_CC_NEWLINE "" EZTR_CC_COLOR_RED " " EZTR_CC_NEWLINE "" EZTR_CC_COLOR_GREEN "" EZTR_CC_TWO_CHOICE "I'll play" EZTR_CC_NEWLINE "I won't play" EZTR_CC_END "",
+        NULL
+    );
+
+    // [SFX FIXES] HONEY & DARLING: Fixes incorrect sound effect "692C" to "6970".
+    EZTR_Basic_ReplaceText(
+        0x2880,
+        EZTR_STANDARD_TEXT_BOX_I,
+        0,
+        EZTR_ICON_NO_ICON,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        EZTR_NO_VALUE,
+        true,
+        "" EZTR_CC_SFX "|69|70H-H-Honey!!!" EZTR_CC_NEWLINE "He...He got a perfect score three" EZTR_CC_NEWLINE "days in a row." EZTR_CC_NEWLINE "" EZTR_CC_BOX_BREAK2 "This is all we have left to give" EZTR_CC_NEWLINE "him, Honey." EZTR_CC_EVENT2 "" EZTR_CC_END "",
         NULL
     );
 
@@ -6425,7 +6607,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for Gorman in Stock Pot Inn
     if (!CONFIG_GORMAN_CARDS) {
-        // [MISTRANSLATION FIXES] GORMAN: Ports mistranslation fix from 3DS
+        // [MISTRANSLATION FIXES] GORMAN: Ports mistranslation fix from 3DS.
         EZTR_Basic_ReplaceText(
             0x2962,
             EZTR_STANDARD_TEXT_BOX_I,
@@ -6609,7 +6791,7 @@ EZTR_ON_INIT void script_revisions() {
             "" EZTR_CC_SFX "|69|07Ouch! Watch where you're going!" EZTR_CC_EVENT "" EZTR_CC_END "",
             NULL
         );
-        // [MISTRANSLATION FIXES] OLD LADY FROM BOMB SHOP: Ports mistranslation fix from 3DS
+        // [MISTRANSLATION FIXES] OLD LADY FROM BOMB SHOP: Ports mistranslation fix from 3DS.
         EZTR_Basic_ReplaceText(
             0x2A31,
             EZTR_STANDARD_TEXT_BOX_I,
@@ -6960,7 +7142,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [COLOR FIXES] TOTO: Changes comma color to match rest of game
+    // [COLOR FIXES] TOTO: Changes comma color to match rest of game. Ported from 3DS.
     EZTR_Basic_ReplaceText(
         0x2B27,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -6988,7 +7170,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [TYPO FIXES] GORMAN: Changes incorrect "singers" to "singer"
+    // [TYPO FIXES] GORMAN: Changes incorrect "singers" to "singer".
     EZTR_Basic_ReplaceText(
         0x2B38,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -7142,7 +7324,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [GRAMMAR FIXES] ROMANI: Capitalizes "sister"
+    // [GRAMMAR FIXES] ROMANI: Capitalizes "sister".
     EZTR_Basic_ReplaceText(
         0x339E,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -7156,7 +7338,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [COLOR FIXES] CREMIA: Fixes color of question mark to match rest of game
+    // [COLOR FIXES] CREMIA: Fixes color of question mark to match rest of game.
     EZTR_Basic_ReplaceText(
         0x339F,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -7170,7 +7352,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [CONSISTENCY CHANGES/FORMATTING FIXES] CREMIA: Standardizes "magic power" as all lowercase, and changes formatting to more polished version from other version of this dialogue
+    // [CONSISTENCY CHANGES/FORMATTING FIXES] CREMIA: Standardizes "magic power" as all lowercase, and changes formatting to more polished version from other version of this dialogue.
     EZTR_Basic_ReplaceText(
         0x33A0,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -7184,7 +7366,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [GRAMMAR FIXES] ROMANI: Capitalizes "sister"
+    // [GRAMMAR FIXES] ROMANI: Capitalizes "sister".
     EZTR_Basic_ReplaceText(
         0x33A2,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -7562,7 +7744,7 @@ EZTR_ON_INIT void script_revisions() {
         NULL
     );
 
-    // [SFX FIXES] MAMAMU YAN: Fixes incorrect sound effect "690D" to "690F"
+    // [SFX FIXES] MAMAMU YAN: Fixes incorrect sound effect "690D" to "690F".
     EZTR_Basic_ReplaceText(
         0x3520,
         EZTR_STANDARD_TEXT_BOX_I,
@@ -7854,7 +8036,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for Circus/Troupe Leader's Mask name TODO: Fix name preview at bottom of menu
     if (CONFIG_GORMAN_MASK) {
-        // [GRAMMAR FIXES/DELAY FIXES] SYSTEM: Adds comma after "sad", and ports missing delay fix from EU
+        // [GRAMMAR FIXES/DELAY FIXES] SYSTEM: Adds comma after "sad", and ports missing delay fix from EU.
         EZTR_Basic_ReplaceText(
             0x0083,
             EZTR_TRANSLUSCENT_BLUE_TEXT_BOX,
@@ -7977,7 +8159,7 @@ EZTR_ON_INIT void script_revisions() {
     // [CONFIG] Configuration for Boss Key/Big Key name
     if (CONFIG_BOSS_KEY != BOSS_KEY_VANILLA) {
         if (CONFIG_BOSS_KEY == BOSS_KEY_BIG) {
-            // [CONSISTENCY CHANGES] SYSTEM: Changes "Boss" to "Big" to match other name used in menu
+            // [CONSISTENCY CHANGES] SYSTEM: Changes "Boss" to "Big" to match other name used in menu.
             EZTR_Basic_ReplaceText(
                 0x003D,
                 EZTR_TRANSLUSCENT_BLUE_TEXT_BOX,
@@ -7991,7 +8173,7 @@ EZTR_ON_INIT void script_revisions() {
                 NULL
             );
         } else {
-            // [CONSISTENCY CHANGES] MENU: Changes "Big" to "Boss" to match item get message name
+            // [CONSISTENCY CHANGES] MENU: Changes "Big" to "Boss" to match item get message name.
             EZTR_Basic_ReplaceText(
                 0x17AC,
                 EZTR_STANDARD_TEXT_BOX_II,
@@ -8026,7 +8208,7 @@ EZTR_ON_INIT void script_revisions() {
 
     // [CONFIG] Configuration for mistranslation fix for Cremia's welcome speech
     if (!CONFIG_CREMIA_WELCOME) {
-        // [MISTRANSLATION FIX] CREMIA: Changes "Chataeu Romani's Village" to "the birthplace of Chateau Romani". Ported from 3DS 
+        // [MISTRANSLATION FIX] CREMIA: Changes "Chateau Romani's Village" to "the birthplace of Chateau Romani". Ported from 3DS.
         EZTR_Basic_ReplaceText(
             0x3393,
             EZTR_STANDARD_TEXT_BOX_I,
@@ -8039,7 +8221,7 @@ EZTR_ON_INIT void script_revisions() {
             "" EZTR_CC_SFX "|69|28Welcome to Romani Ranch," EZTR_CC_NEWLINE "" EZTR_CC_QUICKTEXT_ENABLE "the birthplace of Chateau Romani." EZTR_CC_QUICKTEXT_DISABLE "" EZTR_CC_NEWLINE "Enjoy yourself." EZTR_CC_END "",
             NULL
         );
-        // [MISTRANSLATION FIX] CREMIA: Changes "Chataeu Romani's Village" to "the birthplace of Chateau Romani". Ported from 3DS
+        // [MISTRANSLATION FIX] CREMIA: Changes "Chateau Romani's Village" to "the birthplace of Chateau Romani". Ported from 3DS.
         EZTR_Basic_ReplaceText(
             0x339A,
             EZTR_STANDARD_TEXT_BOX_I,
@@ -8054,4 +8236,3 @@ EZTR_ON_INIT void script_revisions() {
         );
     };
 }
-
