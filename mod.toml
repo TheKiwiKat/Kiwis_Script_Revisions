@@ -8,7 +8,7 @@
 id = "MM_Kiwis_Script_Revisions"
 
 # Version of this mod.
-version = "1.0.1"
+version = "1.0.2"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Kiwi's Script Revisions"
@@ -17,22 +17,22 @@ display_name = "Kiwi's Script Revisions"
 description =  """
 This mod overhauls the script for Majora's Mask and makes revisions to dialogue, messages, menus and other text found in the game. This incorporates almost all the changes made to the script in the European and Gamecube versions of the game, as well as:
 
--Fixing typos, mistranslations, and grammatical errors
+- Fixing typos, mistranslations, and grammatical errors
 
--Fixing broken/incorrect textbox formatting, icons, and other effects
+- Fixing broken/incorrect textbox formatting, icons, and other effects
 
--Fixing broken, incorrect, and missing dialogue sound effects
+- Fixing broken, incorrect, and missing dialogue sound effects
 
--Fixing incorrect text colors
+- Fixing incorrect text colors
 
--Fixing inconsistent keyword spellings, capitalization, color choices, and other stylistic choices
+- Fixing inconsistent keyword spellings, capitalization, color choices, and other stylistic choices
 
 
-Requires Lt_Schmiddy's EZ Text Replacer API to function:
+Requires LT_Schmiddy's EZ Text Replacer API to function:
 https://github.com/LT-Schmiddy/mm-ez-text-replacement-utils
 
 
-Special thanks to Lt_Schmiddy for the aforementioned API, and Skawo and SageOfMirrors for the Zelda 64 Text Editor. Both of these made creating this mod as simple as possible."""
+Special thanks to LT_Schmiddy for the aforementioned API, and Skawo and SageOfMirrors for the Zelda 64 Text Editor. Both of these made creating this mod as simple as possible."""
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
@@ -107,7 +107,7 @@ Ports fix from MM3D for a mistranslated line spoken by the Giant Turtle, and reo
 
 N64: Keeps the original text.
 
-3DS: Enables mistranslation fix."""
+3DS: Enables mistranslation fix. (DEFAULT)"""
 type = "Enum"
 options = [ "N64", "3DS" ]
 default = "3DS"
@@ -185,7 +185,7 @@ Ports fix from MM3D for mistranslated lines spoken by Old Lady from Bomb Shop wh
 
 N64: Keeps the original text.
 
-3DS: Enables mistranslation fix."""
+3DS: Enables mistranslation fix. (DEFAULT)"""
 type = "Enum"
 options = [ "N64", "3DS" ]
 default = "3DS"
@@ -199,7 +199,7 @@ Ports fix from MM3D for mistranslated lines spoken by Cremia when she welcomes y
 
 N64: Keeps the original text.
 
-3DS: Enables mistranslation fix."""
+3DS: Enables mistranslation fix. (DEFAULT)"""
 type = "Enum"
 options = [ "N64", "3DS" ]
 default = "3DS"
@@ -213,7 +213,7 @@ Ports fix from MM3D for a mistranslated line spoken by Gorman while playing card
 
 N64: Keeps the original text.
 
-3DS: Enables mistranslation fix."""
+3DS: Enables mistranslation fix. (DEFAULT)"""
 type = "Enum"
 options = [ "N64", "3DS" ]
 default = "3DS"
@@ -348,5 +348,4 @@ Adds extra sound effects for various dialogues.
 Currently only makes Gorman yell at you while doing the sound test in the Milk Bar."""
 type = "Enum"
 options = [ "On", "Off" ]
-
 default = "On"

@@ -20,6 +20,8 @@ Requires [*LT_Schmiddy's EZ Text Replacer API*](https://thunderstore.io/c/zelda-
 
 **It is recommended that you place the Script Revisions mod close to or at the *bottom* of your mod load order to ensure maximum compatibility with other mods that also use EZTR to replace vanilla text.**
 
+Any mods that increase text printing speed will *re-break* a large portion of the fixes for sound effects not playing in this mod (along with certain sound effects that normally work in vanilla as well).
+
 ## Special Thanks
 - **LT_Schmiddy** for the EZTR API, and therefore doing the *actual* hard part in creating text replacements. 
 
